@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 15:35:16 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/06 17:31:57 by mcreus           ###   ########.fr       */
+/*   Created: 2023/02/06 10:26:10 by mcreus            #+#    #+#             */
+/*   Updated: 2023/02/06 11:20:16 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	return (c >= 0 && c <= 127);
-}
+	int	len;
 
-int	main()
-{
-	int	c;
-
-	c = 'a';
-	ft_isascii(c);
+	len = ft_strlen(s);
+	while (len >= 0)
+	{
+		if (s[len] == (char)c)
+			return ((char *)s + len);
+		len--;
+	}
+	return (NULL);
 }
