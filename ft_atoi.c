@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 15:35:16 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/06 17:31:57 by mcreus           ###   ########.fr       */
+/*   Created: 2023/02/06 16:56:21 by mcreus            #+#    #+#             */
+/*   Updated: 2023/02/06 17:27:23 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	atoi(const char *nptr)
 {
-	return (c >= 0 && c <= 127);
-}
+	int	i;
+	int	res;
+	int	signe;
 
-int	main()
-{
-	int	c;
-
-	c = 'a';
-	ft_isascii(c);
+	i = 0;
+	res = 0;
+	signe = 1;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			signe = (signe * -1);
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = res * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (res * signe);
 }
