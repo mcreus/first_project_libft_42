@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 09:58:21 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/08 16:54:06 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/09 09:37:52 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,15 @@ static int	ft_count_words(const char *str, char c)
 
 	i = 0;
 	count = 0;
+	if (!str[i])
+		return (0);
 	while (str[i])
 	{
 		while (str[i] == c)
 			i++;
-		while (str[i] != c && str[i] != '\0')
+		if (str[i] && str[i] != c)
 			count++;
+		while (str[i] != c && str[i])
 			i++;
 	}
 	return (count);
@@ -67,8 +70,8 @@ char	**ft_split(char const *s, char c)
 		else if (s[i] == c || i == ft_strlen(s) && index >= 0)
 		{
 			split[j] = ft_word_dup (s, index, i);
-			f++;
-			index -= 1;
+			j++;
+			index = -1;
 		}
 		i++;
 	}

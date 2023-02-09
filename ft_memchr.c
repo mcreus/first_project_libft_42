@@ -6,9 +6,11 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:40:59 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/06 12:12:51 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/07 12:18:18 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 15:00:26 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/03 14:45:13 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/07 12:18:45 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
