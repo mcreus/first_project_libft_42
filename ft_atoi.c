@@ -6,13 +6,13 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:56:21 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:07:35 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/10 18:51:21 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	res;
@@ -31,7 +31,7 @@ int	atoi(const char *nptr)
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		res = res * 10 + (nptr[i] - '0');
+		res = (res * 10 + nptr[i] - '0');
 		i++;
 	}
 	return (res * signe);

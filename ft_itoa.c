@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 17:00:16 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/09 13:13:08 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/10 16:32:54 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ char	*ft_itoa(int n)
 	i = 0;
 	if (j < 0 && count == 0)
 		count++;
-	if (!(str == ft_strnew(count)))
+	str = ft_strnew(count);
+	if (!(str))
 		return (NULL);
 	if (j < 0)
 	{
