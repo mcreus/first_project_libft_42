@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 17:00:16 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 16:32:54 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/13 10:23:46 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_count_size(int n)
 	int	i;
 
 	i = 0;
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
 		n *= -1;
 	while (n != 0)
@@ -59,10 +61,10 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		i++;
 	}
-	while (count > i)
+	while (count >= i)
 	{
-		count--;
 		str[count] = (j % 10) + '0';
+		count--;
 		j /= 10;
 	}
 	return (str);

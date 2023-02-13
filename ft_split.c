@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 09:58:21 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/11 13:31:12 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/13 16:03:16 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,56 +19,47 @@ static int	count_word(char const *s, char c)
 
 	i = 0;
 	word = 0;
-	while (*s)
+	while (s[i])
 	{
-		if (*s != c && word == 0)
-		{
-			word = 1;
-			i++;
-		}
-		else if (*s == c)
-			word = 0;
-		s++;
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
+			word++;
+		i++;
 	}
-	return (i);
+	return (word);
 }
 
-static char	*word_dup(const char *str, int start, int end)
+static char	**free_word(char **s)
 {
-	char	*word;
-	int		i;
-
-	i = 0;
-	word = (char *)malloc(sizeof(char) * (end - start));
-	while (start < end)
-		word[i++] = str[start++];
-	word[i] = 0;
-	return (word);
+	while (*s)
+		free(*s++);
+	free(s);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	int		index;
+	int		i;
+	int		j;
 	char	**split;
 
-	split = malloc(sizeof(char *) * (count_word(s, c) + 1));
-	if (!s || !split)
-		return (0);
-	i = 0;
 	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s))
+	if (!s)
+		return (NULL);
+	split = malloc(sizeof(char *) * (count_word(s, c) + 1));
+	if (!split)
+		return (NULL);
+	while (*s)
 	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
-		{
-			split[j++] = word_dup(s, index, i);
-			index = -1;
-		}
-		i++;
+		while (*s == c && *s)
+			s++;
+		i = 0;
+		while (s[i] != c && s[i])
+			i++;
+		if (*s && i)
+			split[j++] = ft_substr(s, 0, i);
+		if (i != 0 && !(split[j - 1]))
+			return (free_word(split));
+		s += i;
 	}
 	split[j] = 0;
 	return (split);

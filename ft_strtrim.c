@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:31:06 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/11 10:29:55 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/13 12:04:12 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > start && ft_char_in_set(s1[end - 1], set))
 		end--;
-	str = (char *)malloc(sizeof(s1) * (end - start + 1));
+	str = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -56,3 +56,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
+/*
+int	main()
+{
+	char str[] = "   hello        wor    l               ";
+	char toto[]= " ";
+
+	printf("%s", ft_strtrim(str, toto));
+}*/
