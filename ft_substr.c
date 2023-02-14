@@ -6,14 +6,11 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 10:14:52 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/13 12:06:29 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 19:32:25 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*la fonction sert a extraire une sous chaine s, en indiquant le debut et la
-taille demandee, elle est renvoyee en fin de fonction*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -41,3 +38,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = 0;
 	return (str);
 }
+/*extracts a substring s, indicating the beginning and 
+the requested size then is returned*/

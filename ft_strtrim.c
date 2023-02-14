@@ -6,15 +6,11 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:31:06 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/13 12:04:12 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 16:15:53 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Permet d'enlever les white space en debut et en fin de chaine, 
-premiere fonction pour determiner les caracteres voulus et 
-ensuite la fonction principale */
 
 static int	ft_char_in_set(char c, char const *set)
 {
@@ -56,11 +52,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
-/*
-int	main()
-{
-	char str[] = "   hello        wor    l               ";
-	char toto[]= " ";
-
-	printf("%s", ft_strtrim(str, toto));
-}*/
+/*allows to remove the white space at the beginning and the end of the string*/

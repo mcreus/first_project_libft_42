@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:26:10 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 17:53:00 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:41:06 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+/*the same as strchr but starting from the end*/

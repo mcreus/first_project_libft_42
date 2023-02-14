@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 18:05:54 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:16:12 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:35:22 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+/*convert uppercase to lowercase*/

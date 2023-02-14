@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:35:26 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:15:28 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:54:36 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,5 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	}
 	return (NULL);
 }
+/*searches for a substring in a string by limiting the search 
+to a number of characters*/

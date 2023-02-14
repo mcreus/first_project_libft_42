@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 18:05:36 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:13:26 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:28:37 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+/*checks if a character is printable*/

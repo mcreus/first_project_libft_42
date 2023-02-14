@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 09:58:21 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/13 16:03:16 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 16:18:52 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,5 @@ char	**ft_split(char const *s, char c)
 	split[j] = 0;
 	return (split);
 }
+/*splits a string into a list of substrings according 
+to a specified delimiter*/

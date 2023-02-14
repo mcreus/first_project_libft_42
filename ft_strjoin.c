@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:35:19 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 17:50:38 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 16:12:50 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	str = (char *)malloc(sizeof(*s1) * (ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1));
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -39,3 +39,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = 0;
 	return (str);
 }
+/*concatenates two strings by allocating dynamic memory
+to store the result*/

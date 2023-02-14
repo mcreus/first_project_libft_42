@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:40:59 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:18:18 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:11:32 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/* searches for the fist occurence by scanning the first n bytes
+of the character string and returns a pointer to the first
+occurence found*/

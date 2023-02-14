@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:24:13 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:08:54 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:20:48 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+/*check if a character is a number*/

@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 11:44:25 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:12:32 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 14:39:42 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,5 @@ void	ft_bzero(void *s, size_t n)
 {
 	memset(s, 0, n);
 }
+
+/* fill a memory area with zeros */

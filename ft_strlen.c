@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 18:29:45 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 18:08:28 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:16:44 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,4 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+/*calculate dthe size of a string*/

@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:30:34 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:08:21 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:22:07 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*checks if a character is alphanumeric*/

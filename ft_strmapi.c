@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 10:12:57 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 18:02:55 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 16:27:36 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!(str))
 		return (NULL);
 	i = 0;
@@ -31,3 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = 0;
 	return (str);
 }
+/*applies the f function to each character in the character string
+passed as argument, and passing its index as the first argument. 
+each character is passed by address to f to be modified if 
+necessary*/

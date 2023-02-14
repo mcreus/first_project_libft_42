@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 09:42:41 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/07 12:09:54 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 14:35:12 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/* fills the pointed memory area with the requested value 
+at the requested size */

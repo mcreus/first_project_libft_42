@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:56:21 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 18:51:21 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:57:41 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,4 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * signe);
 }
+/*convert a string to integer*/

@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:29:22 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/10 17:51:05 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:51:27 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
+/*concatenates a source string in a destination buffer by
+limiting the length*/

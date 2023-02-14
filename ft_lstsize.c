@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 12:13:20 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/14 15:15:09 by mcreus           ###   ########.fr       */
+/*   Created: 2023/02/14 17:38:40 by mcreus            #+#    #+#             */
+/*   Updated: 2023/02/14 17:41:51 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
+	int	i;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
-	while (n--)
+	i = 0;
+	while (lst)
 	{
-		if (*str1 != *str2)
-			return (*str1 - *str2);
-		str1++;
-		str2++;
+		*lst = *lst -> new;
+		i++;
 	}
-	return (0);
+	return (i);
 }
-/*compares two memory areas and returns the diffence between 
-the first and second*/

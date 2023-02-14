@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:22:42 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/13 10:43:50 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:43:36 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*compares the first characters of two strings*/
