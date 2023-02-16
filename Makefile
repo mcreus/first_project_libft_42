@@ -6,7 +6,7 @@
 #    By: mcreus <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:28:25 by mcreus            #+#    #+#              #
-#    Updated: 2023/02/14 17:52:26 by mcreus           ###   ########.fr        #
+#    Updated: 2023/02/16 15:32:02 by mcreus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME =	libft.a
@@ -18,7 +18,8 @@ SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_putchar_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_striteri.c ft_strmapi.c
 
-SRCS_BONUS = ft_lstnew.c ft_lstsize.c ft_lstadd_front.c
+SRCS_BONUS = ft_lstnew.c ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c \
+	     ft_lstlast.c ft_lstdelone.c ft_lstclear.c 
 
 OBJS = $(SRCS:.c=.o)
 
@@ -37,7 +38,7 @@ bonus: $(OBJS_BONUS)
 	ar -rc $(NAME) $(OBJS_BONUS)
 
 clean: 
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)

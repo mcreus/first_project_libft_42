@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:38:40 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/14 17:41:51 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/16 15:01:38 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
+	if (!lst)
+		return (0);
 	while (lst)
 	{
-		*lst = *lst -> new;
 		i++;
+		lst = lst->next;
 	}
 	return (i);
 }

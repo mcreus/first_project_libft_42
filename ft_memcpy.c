@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 12:37:49 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/14 14:42:33 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/16 11:15:54 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dest)
+	if (!dest && !src)
 		return (NULL);
 	while (i < n)
 	{

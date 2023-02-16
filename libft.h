@@ -6,7 +6,7 @@
 /*   By: mcreus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 14:13:56 by mcreus            #+#    #+#             */
-/*   Updated: 2023/02/14 19:39:19 by mcreus           ###   ########.fr       */
+/*   Updated: 2023/02/16 15:33:24 by mcreus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <stddef.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void		*content;
+	void			*content;
 	struct s_list	*next;
-			t_list;
-}
+}	t_list;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -60,7 +60,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 t_list	*ft_lstnew(void *content);
-void	ft_lst_add_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
